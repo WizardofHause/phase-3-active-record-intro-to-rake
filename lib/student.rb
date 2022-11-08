@@ -13,6 +13,8 @@ class Student
     @grade = grade
   end
   
+  # vvv method we're using to build the migrate Rake task
+  # NORMALLY could be handled with ActiveRecord::Base...
   def self.create_table
     sql =  <<-SQL 
       CREATE TABLE IF NOT EXISTS students (
